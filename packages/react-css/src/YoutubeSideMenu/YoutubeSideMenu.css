@@ -1,0 +1,41 @@
+.yt-side-menu {
+  background: #0f0f0f;
+  padding: 8px 0;
+}
+
+.yt-side-menu__list {
+  list-style: none;
+}
+
+.yt-side-menu__item {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 10px 24px;
+  background: transparent;
+  border: none;
+  color: #f1f1f1;
+  font-size: 0.875rem;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.1s;
+  white-space: nowrap;
+}
+
+.yt-side-menu__item:hover {
+  background: #272727;
+}
+
+.yt-side-menu__item--more {
+  color: #aaa;
+}
+
+.yt-side-menu__icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}

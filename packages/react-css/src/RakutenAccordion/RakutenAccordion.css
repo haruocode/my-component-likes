@@ -1,0 +1,52 @@
+.rakuten-accordion {
+  border-top: 1px solid #e0e0e0;
+}
+
+.rakuten-accordion__item {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.rakuten-accordion__trigger {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  width: 100%;
+  padding: 1.125rem 0;
+  background: transparent;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.1s;
+}
+
+.rakuten-accordion__trigger:hover {
+  background: #fafafa;
+}
+
+.rakuten-accordion__icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #e4007f;
+  color: #fff;
+  margin-top: 1px;
+}
+
+.rakuten-accordion__question {
+  flex: 1;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #111;
+  line-height: 1.5;
+}
+
+.rakuten-accordion__content {
+  padding: 0 0 1.125rem 36px;
+  font-size: 0.9375rem;
+  color: #444;
+  line-height: 1.7;
+}

@@ -1,0 +1,39 @@
+.yt-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: #272727;
+  color: #f1f1f1;
+  cursor: pointer;
+  transition: background 0.1s;
+}
+
+.yt-btn:focus-visible {
+  outline: 2px solid #f1f1f1;
+  outline-offset: 2px;
+}
+
+.yt-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.yt-btn:hover:not(:disabled) {
+  background: #3d3d3d;
+}
+
+.yt-btn--icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.yt-btn--pill {
+  gap: 6px;
+  height: 36px;
+  padding: 0 16px;
+  border-radius: 18px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}

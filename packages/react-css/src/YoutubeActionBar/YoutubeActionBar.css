@@ -1,0 +1,94 @@
+.yt-action-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.yt-action-bar::-webkit-scrollbar {
+  display: none;
+}
+
+/* like/dislike grouped pill */
+.yt-action-bar__like-group {
+  display: flex;
+  align-items: center;
+  background: #272727;
+  border-radius: 18px;
+  height: 36px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.yt-action-bar__like,
+.yt-action-bar__dislike {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 14px;
+  background: transparent;
+  border: none;
+  color: #f1f1f1;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  height: 100%;
+  transition: background 0.1s;
+  white-space: nowrap;
+}
+
+.yt-action-bar__like:hover,
+.yt-action-bar__dislike:hover {
+  background: #3d3d3d;
+}
+
+.yt-action-bar__like-divider {
+  width: 1px;
+  height: 20px;
+  background: #3d3d3d;
+  flex-shrink: 0;
+}
+
+/* other action pills */
+.yt-action-bar__action {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 16px;
+  height: 36px;
+  border-radius: 18px;
+  background: #272727;
+  border: none;
+  color: #f1f1f1;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background 0.1s;
+}
+
+.yt-action-bar__action:hover {
+  background: #3d3d3d;
+}
+
+/* more button (round) */
+.yt-action-bar__more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #272727;
+  border: none;
+  color: #f1f1f1;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.1s;
+}
+
+.yt-action-bar__more:hover {
+  background: #3d3d3d;
+}

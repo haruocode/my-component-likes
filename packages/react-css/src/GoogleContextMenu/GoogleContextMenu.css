@@ -1,0 +1,45 @@
+.google-context-menu {
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  min-width: 220px;
+  padding: 4px 0;
+}
+
+.google-context-menu__item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: transparent;
+  border: none;
+  width: 100%;
+  text-align: left;
+  font-size: 0.875rem;
+  color: #202124;
+  cursor: pointer;
+  transition: background 0.1s;
+}
+
+.google-context-menu__item:hover {
+  background: #f1f3f4;
+}
+
+.google-context-menu__item--active {
+  background: #f1f3f4;
+}
+
+.google-context-menu__icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  color: #5f6368;
+}
+
+.google-context-menu__label {
+  flex: 1;
+}

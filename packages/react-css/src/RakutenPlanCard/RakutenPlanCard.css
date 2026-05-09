@@ -1,0 +1,81 @@
+.rakuten-plan-card {
+  display: flex;
+  gap: 14px;
+  padding: 1.125rem 1.25rem;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 10px;
+  background: #fff;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  transition: border-color 0.15s;
+}
+
+.rakuten-plan-card:hover:not(.rakuten-plan-card--selected) {
+  border-color: #c0c0e0;
+}
+
+.rakuten-plan-card--selected {
+  border: 2px solid #4040ef;
+  box-shadow: 0 0 0 1px rgba(64, 64, 239, 0.08);
+}
+
+/* radio dot */
+.rakuten-plan-card__radio {
+  flex-shrink: 0;
+  margin-top: 3px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.15s;
+}
+
+.rakuten-plan-card--selected .rakuten-plan-card__radio {
+  border-color: #4040ef;
+}
+
+.rakuten-plan-card__radio-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #4040ef;
+}
+
+/* body */
+.rakuten-plan-card__body {
+  flex: 1;
+  min-width: 0;
+}
+
+.rakuten-plan-card__label {
+  font-size: 0.75rem;
+  color: #e4007f;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.rakuten-plan-card__name {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 0.2rem;
+}
+
+.rakuten-plan-card__price {
+  font-size: 0.875rem;
+  color: #333;
+}
+
+.rakuten-plan-card__note {
+  font-size: 0.75rem;
+  color: #888;
+  margin-top: 0.125rem;
+}
+
+.rakuten-plan-card__badge {
+  margin-top: 0.625rem;
+}

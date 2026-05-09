@@ -1,0 +1,1 @@
+export { AmazonButton } from "./AmazonButton";

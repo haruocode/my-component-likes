@@ -58,6 +58,7 @@ export default function App() {
               name={comp.name}
               description={comp.description}
               referenceUrl={comp.referenceUrl}
+              previewStyle={comp.previewStyle}
               preview={comp.preview}
               files={comp.files}
             />

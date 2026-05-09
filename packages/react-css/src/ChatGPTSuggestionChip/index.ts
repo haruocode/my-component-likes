@@ -1,0 +1,1 @@
+export { ChatGPTSuggestionChip } from "./ChatGPTSuggestionChip";

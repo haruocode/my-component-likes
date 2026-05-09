@@ -1,0 +1,74 @@
+.amazon-btn {
+  display: block;
+  width: 100%;
+  padding: 0 18px;
+  height: 40px;
+  border: 1px solid transparent;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #0f1111;
+  cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
+  box-shadow: 0 2px 5px 0 rgba(213, 217, 217, 0.5);
+  transition: background-color 0.1s, border-color 0.1s;
+}
+
+.amazon-btn:focus-visible {
+  outline: 3px solid #c8a400;
+  outline-offset: 2px;
+}
+
+.amazon-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* add-to-cart */
+.amazon-btn--add-to-cart {
+  background-color: #ffd814;
+  border-color: #fcd200;
+  border-radius: 8px;
+}
+
+.amazon-btn--add-to-cart:hover:not(:disabled) {
+  background-color: #f7ca00;
+  border-color: #f2c200;
+}
+
+.amazon-btn--add-to-cart:active:not(:disabled) {
+  background-color: #f0c000;
+}
+
+/* buy-now */
+.amazon-btn--buy-now {
+  background-color: #ffa41c;
+  border-color: #ff8f00;
+  border-radius: 8px;
+}
+
+.amazon-btn--buy-now:hover:not(:disabled) {
+  background-color: #fa8900;
+  border-color: #e07c00;
+}
+
+.amazon-btn--buy-now:active:not(:disabled) {
+  background-color: #e07c00;
+}
+
+/* place-order */
+.amazon-btn--place-order {
+  background-color: #ffd814;
+  border-color: #fcd200;
+  border-radius: 100px;
+  height: 44px;
+}
+
+.amazon-btn--place-order:hover:not(:disabled) {
+  background-color: #f7ca00;
+  border-color: #f2c200;
+}
+
+.amazon-btn--place-order:active:not(:disabled) {
+  background-color: #f0c000;
+}

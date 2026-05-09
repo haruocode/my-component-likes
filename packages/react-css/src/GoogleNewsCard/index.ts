@@ -1,0 +1,1 @@
+export { GoogleNewsCard } from "./GoogleNewsCard";

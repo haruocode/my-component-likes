@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import type { ReactNode, CSSProperties } from "react";
 import { CodeViewer } from "../CodeViewer/CodeViewer";
 import type { CodeFile } from "../../data/registry";
 import "./ComponentCard.css";
@@ -7,6 +7,7 @@ interface ComponentCardProps {
   name: string;
   description?: string;
   referenceUrl?: string;
+  previewStyle?: CSSProperties;
   preview: ReactNode;
   files: CodeFile[];
 }
@@ -15,6 +16,7 @@ export function ComponentCard({
   name,
   description,
   referenceUrl,
+  previewStyle,
   preview,
   files,
 }: ComponentCardProps) {
@@ -52,7 +54,7 @@ export function ComponentCard({
           </a>
         )}
       </div>
-      <div className="component-card__preview">{preview}</div>
+      <div className="component-card__preview" style={previewStyle}>{preview}</div>
       <CodeViewer files={files} />
     </div>
   );

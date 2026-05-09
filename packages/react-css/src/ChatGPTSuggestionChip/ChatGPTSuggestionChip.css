@@ -1,0 +1,36 @@
+.chatgpt-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.625rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 100px;
+  background: transparent;
+  color: #ececec;
+  font-size: 0.875rem;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.chatgpt-chip:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.chatgpt-chip:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.5);
+  outline-offset: 2px;
+}
+
+.chatgpt-chip:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.chatgpt-chip__icon {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  color: #ececec;
+}

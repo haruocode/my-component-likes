@@ -1,0 +1,47 @@
+.yt-search {
+  display: flex;
+  align-items: center;
+  border: 1px solid #303030;
+  border-radius: 40px;
+  overflow: hidden;
+  background: #121212;
+}
+
+.yt-search:focus-within {
+  border-color: #1c62b9;
+}
+
+.yt-search__input {
+  flex: 1;
+  height: 40px;
+  padding: 0 16px;
+  background: transparent;
+  border: none;
+  color: #f1f1f1;
+  font-size: 1rem;
+  outline: none;
+  min-width: 0;
+}
+
+.yt-search__input::placeholder {
+  color: #717171;
+}
+
+.yt-search__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 64px;
+  height: 40px;
+  background: #272727;
+  border: none;
+  border-left: 1px solid #303030;
+  color: #f1f1f1;
+  cursor: pointer;
+  transition: background 0.1s;
+}
+
+.yt-search__btn:hover {
+  background: #3d3d3d;
+}

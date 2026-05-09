@@ -1,0 +1,1 @@
+export { RakutenShortcutLinks } from "./RakutenShortcutLinks";

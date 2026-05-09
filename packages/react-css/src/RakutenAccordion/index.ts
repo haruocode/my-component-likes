@@ -1,0 +1,1 @@
+export { RakutenAccordion } from "./RakutenAccordion";
