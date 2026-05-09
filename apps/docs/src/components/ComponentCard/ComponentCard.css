@@ -1,0 +1,50 @@
+.component-card {
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.component-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.component-card__name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.component-card__desc {
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+.component-card__ref {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 6px;
+  border: 1px solid var(--color-border-strong);
+  color: var(--color-text-muted);
+  transition: color 0.15s, border-color 0.15s, background-color 0.15s;
+}
+
+.component-card__ref:hover {
+  color: var(--color-text);
+  background: var(--color-hover);
+}
+
+.component-card__preview {
+  padding: 2rem 1.5rem;
+  background: var(--color-preview-bg);
+}
