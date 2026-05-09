@@ -19,6 +19,9 @@ import {
   RakutenPlanCard,
   GoogleNewsCard,
   GoogleContextMenu,
+  HatenaBlogTopicFilter,
+  HatenaBlogArticleCard,
+  HatenaBlogOdaiCard,
 } from "@my-component-likes/react-css";
 import buttonTsxRaw from "../../../../packages/react-css/src/Button/Button.tsx?raw";
 import buttonCssRaw from "../../../../packages/react-css/src/Button/Button.css?raw";
@@ -52,6 +55,12 @@ import rakutenModalTsxRaw from "../../../../packages/react-css/src/RakutenModal/
 import rakutenModalCssRaw from "../../../../packages/react-css/src/RakutenModal/RakutenModal.css?raw";
 import rakutenPlanCardTsxRaw from "../../../../packages/react-css/src/RakutenPlanCard/RakutenPlanCard.tsx?raw";
 import rakutenPlanCardCssRaw from "../../../../packages/react-css/src/RakutenPlanCard/RakutenPlanCard.css?raw";
+import hatenaBlogTopicFilterTsxRaw from "../../../../packages/react-css/src/HatenaBlogTopicFilter/HatenaBlogTopicFilter.tsx?raw";
+import hatenaBlogTopicFilterCssRaw from "../../../../packages/react-css/src/HatenaBlogTopicFilter/HatenaBlogTopicFilter.css?raw";
+import hatenaBlogArticleCardTsxRaw from "../../../../packages/react-css/src/HatenaBlogArticleCard/HatenaBlogArticleCard.tsx?raw";
+import hatenaBlogArticleCardCssRaw from "../../../../packages/react-css/src/HatenaBlogArticleCard/HatenaBlogArticleCard.css?raw";
+import hatenaBlogOdaiCardTsxRaw from "../../../../packages/react-css/src/HatenaBlogOdaiCard/HatenaBlogOdaiCard.tsx?raw";
+import hatenaBlogOdaiCardCssRaw from "../../../../packages/react-css/src/HatenaBlogOdaiCard/HatenaBlogOdaiCard.css?raw";
 import googleNewsCardTsxRaw from "../../../../packages/react-css/src/GoogleNewsCard/GoogleNewsCard.tsx?raw";
 import googleNewsCardCssRaw from "../../../../packages/react-css/src/GoogleNewsCard/GoogleNewsCard.css?raw";
 import googleContextMenuTsxRaw from "../../../../packages/react-css/src/GoogleContextMenu/GoogleContextMenu.tsx?raw";
@@ -746,6 +755,135 @@ export const SITES: SiteEntry[] = [
         files: [
           { label: "TypeScript", code: youtubeSideMenuTsxRaw },
           { label: "CSS", code: youtubeSideMenuCssRaw },
+        ],
+      },
+    ],
+  },
+  {
+    id: "hatena-blog",
+    label: "はてなブログ",
+    components: [
+      {
+        id: "hatena-topic-filter",
+        name: "Topic Filter",
+        description:
+          "「すべてのトピック▼」ドロップダウン付きの横スクロールトピックチップバー。",
+        preview: (() => {
+          const TOPICS = [
+            { id: "diary", label: "日記・雑談" },
+            { id: "lifestyle", label: "ライフスタイル" },
+            { id: "oshi", label: "推し" },
+            { id: "cooking", label: "料理・レシピ" },
+            { id: "tech", label: "技術" },
+            { id: "diy", label: "DIY・インテリア" },
+            { id: "parenting", label: "育児・教育" },
+            { id: "beauty", label: "コスメ・美容" },
+            { id: "books", label: "読書・マンガ" },
+            { id: "movie", label: "映画" },
+            { id: "music", label: "音楽" },
+            { id: "work", label: "働き方" },
+            { id: "photo", label: "写真・カメラ" },
+            { id: "travel", label: "旅行" },
+            { id: "gourmet", label: "グルメ" },
+            { id: "game", label: "ゲーム" },
+            { id: "boardgame", label: "ボードゲーム" },
+            { id: "creation", label: "創作" },
+            { id: "anime", label: "アニメ" },
+            { id: "sports", label: "スポーツ" },
+            { id: "outdoor", label: "アウトドア" },
+            { id: "gadget", label: "ガジェット・家電" },
+            { id: "pet", label: "ペット" },
+            { id: "study", label: "学習" },
+            { id: "odai", label: "今週のお題" },
+          ];
+          function TopicFilterPreview() {
+            const [selected, setSelected] = useState<string | null>(null);
+            return (
+              <HatenaBlogTopicFilter
+                topics={TOPICS}
+                selected={selected}
+                onSelect={setSelected}
+              />
+            );
+          }
+          return <TopicFilterPreview />;
+        })(),
+        files: [
+          { label: "TypeScript", code: hatenaBlogTopicFilterTsxRaw },
+          { label: "CSS", code: hatenaBlogTopicFilterCssRaw },
+        ],
+      },
+      {
+        id: "hatena-article-card",
+        name: "Article Card",
+        description:
+          "サムネイル・ヘッドライン・タイトル・著者・星の数・カテゴリタグを持つ記事カード。",
+        preview: (
+          <div style={{ maxWidth: "400px" }}>
+            <HatenaBlogArticleCard
+              headline="最初は、主線を目立たせない工夫ができる動物を描いていた"
+              title="iPadお絵描きが楽しすぎてヤバい！！！"
+              description="iPadで描いたうちの犬 ゴールデンウィーク。たくさん遊んで疲れたのかぐっすり寝ていたので描きました。"
+              thumbnailSrc="https://placehold.co/80x80/e8eaed/5f6368?text=img"
+              authorName="平凡"
+              starCount={60}
+              category="お絵描き"
+            />
+            <HatenaBlogArticleCard
+              headline="最初の一回でぶち抜かれたアジフライ。初夏が待ち遠しい"
+              title="ほのかに甘いアジフライをさがして"
+              description="毎日新聞には以前は西原理恵子さんの連載が…"
+              thumbnailSrc="https://placehold.co/80x80/d0e8d0/4a7c4a?text=img"
+              authorName="名付けられぬ浅い領域"
+              starCount={84}
+              category="日常"
+            />
+          </div>
+        ),
+        files: [
+          { label: "TypeScript", code: hatenaBlogArticleCardTsxRaw },
+          { label: "CSS", code: hatenaBlogArticleCardCssRaw },
+        ],
+      },
+      {
+        id: "hatena-odai-card",
+        name: "Odai Card",
+        description:
+          "出題者ID・お題タイトル・投稿数バッジ・「記事を書く」ボタンを持つお題カード。",
+        preview: (
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(2, 1fr)",
+              gap: "12px",
+              maxWidth: "600px",
+            }}
+          >
+            <HatenaBlogOdaiCard
+              authorId="syukan_blog"
+              title="人生で一度でいいからいってみたい国ってどこですか？"
+              postCount="100 件以上"
+            />
+            <HatenaBlogOdaiCard
+              authorId="aorog"
+              title="高校生に戻ったらしたいこと"
+              postCount="100 件以上"
+            />
+            <HatenaBlogOdaiCard
+              authorId="kogumaxoimo"
+              title="もっと早くやっておけばよかったと思う事"
+              postCount="100 件以上"
+            />
+            <HatenaBlogOdaiCard
+              authorId="jiliki"
+              title="思い切ってやめてみた事"
+              postCount="100 件以上"
+            />
+          </div>
+        ),
+        files: [
+          { label: "TypeScript", code: hatenaBlogOdaiCardTsxRaw },
+          { label: "CSS", code: hatenaBlogOdaiCardCssRaw },
         ],
       },
     ],

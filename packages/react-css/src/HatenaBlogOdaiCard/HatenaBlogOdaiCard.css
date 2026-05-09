@@ -1,0 +1,56 @@
+.hatena-odai-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+  background: #fff;
+  border: 1px solid #dce6f0;
+  border-radius: 6px;
+}
+
+.hatena-odai-card__author {
+  font-size: 0.75rem;
+  color: #888;
+}
+
+.hatena-odai-card__title {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #243869;
+  line-height: 1.5;
+  flex: 1;
+}
+
+.hatena-odai-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.hatena-odai-card__count {
+  font-size: 0.75rem;
+  color: #1a6ea8;
+  background: #ddeeff;
+  padding: 3px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.hatena-odai-card__btn {
+  padding: 6px 16px;
+  background: #1a6ea8;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s;
+}
+
+.hatena-odai-card__btn:hover {
+  background: #155c8f;
+}

@@ -1,0 +1,104 @@
+.hatena-topic-filter {
+  position: relative;
+  background: #fff;
+}
+
+.hatena-topic-filter__bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.hatena-topic-filter__bar::-webkit-scrollbar {
+  display: none;
+}
+
+.hatena-topic-filter__all {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: none;
+  background: #243869;
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.hatena-topic-filter__all:hover {
+  background: #1a2d56;
+}
+
+.hatena-topic-filter__chevron {
+  transition: transform 0.2s;
+}
+
+.hatena-topic-filter__all[aria-expanded="true"] .hatena-topic-filter__chevron {
+  transform: rotate(180deg);
+}
+
+.hatena-topic-filter__chip {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid #d0d0d0;
+  background: #fff;
+  color: #333;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+  white-space: nowrap;
+}
+
+.hatena-topic-filter__chip:hover {
+  background: #f5f5f5;
+}
+
+.hatena-topic-filter__chip--selected {
+  background: #243869;
+  color: #fff;
+  border-color: #243869;
+}
+
+.hatena-topic-filter__dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-top: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  z-index: 100;
+}
+
+.hatena-topic-filter__dropdown-item {
+  padding: 11px 16px;
+  border: none;
+  border-bottom: 1px solid #f0f0f0;
+  background: transparent;
+  color: #243869;
+  font-size: 0.875rem;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.1s;
+}
+
+.hatena-topic-filter__dropdown-item:hover {
+  background: #f5f7fa;
+}
+
+.hatena-topic-filter__dropdown-item--selected {
+  font-weight: 700;
+}
