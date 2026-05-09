@@ -1,0 +1,13 @@
+{
+  "name": "my-component-likes",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=apps/docs",
+    "build": "npm run build --workspace=packages/react-css",
+    "build:all": "npm run build && npm run build --workspace=apps/docs"
+  }
+}
