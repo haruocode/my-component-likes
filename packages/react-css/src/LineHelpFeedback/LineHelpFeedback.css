@@ -1,0 +1,86 @@
+.line-feedback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 32px 24px;
+  background: #fff;
+}
+
+.line-feedback__bubble {
+  position: relative;
+  background: #06c755;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 12px 28px;
+  border-radius: 8px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.line-feedback__bubble::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top-color: #06c755;
+  border-bottom: none;
+}
+
+.line-feedback__desc {
+  font-size: 0.875rem;
+  color: #555;
+  text-align: center;
+  line-height: 1.6;
+  max-width: 420px;
+}
+
+.line-feedback__actions {
+  display: flex;
+  border: 1px solid #d0d0d0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.line-feedback__btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 36px;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.line-feedback__btn:hover {
+  opacity: 0.85;
+}
+
+.line-feedback__btn--yes {
+  background: #06c755;
+  color: #fff;
+}
+
+.line-feedback__btn--no {
+  background: #fff;
+  color: #444;
+  border-left: 1px solid #d0d0d0;
+}
+
+.line-feedback__emoji {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.line-feedback__thanks {
+  font-size: 0.9375rem;
+  color: #444;
+  text-align: center;
+}

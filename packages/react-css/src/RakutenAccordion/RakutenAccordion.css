@@ -44,9 +44,34 @@
   line-height: 1.5;
 }
 
+.rakuten-accordion__chevron {
+  transition: transform 0.25s ease;
+}
+
+.rakuten-accordion__chevron--open {
+  transform: rotate(180deg);
+}
+
+.rakuten-accordion__body {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.25s ease;
+}
+
+.rakuten-accordion__body--open {
+  grid-template-rows: 1fr;
+}
+
 .rakuten-accordion__content {
-  padding: 0 0 1.125rem 36px;
+  overflow: hidden;
+  min-height: 0;
+  padding: 0 0 0 36px;
   font-size: 0.9375rem;
   color: #444;
   line-height: 1.7;
+  transition: padding 0.25s ease;
+}
+
+.rakuten-accordion__body--open .rakuten-accordion__content {
+  padding-bottom: 1.125rem;
 }

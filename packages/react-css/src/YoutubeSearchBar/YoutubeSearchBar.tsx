@@ -1,10 +1,13 @@
+import { useRef } from "react";
 import "./YoutubeSearchBar.css";
 
 interface YoutubeSearchBarProps extends React.InputHTMLAttributes<HTMLInputElement> {
   onSearch?: (value: string) => void;
 }
 
-export function YoutubeSearchBar({ onSearch, ...props }: YoutubeSearchBarProps) {
+export function YoutubeSearchBar({ onSearch, style, className, ...props }: YoutubeSearchBarProps) {
+  const inputRef = useRef<HTMLInputElement>(null);
+
   function handleKeyDown(e: React.KeyboardEvent<HTMLInputElement>) {
     if (e.key === "Enter") {
       onSearch?.(e.currentTarget.value);
@@ -12,13 +15,13 @@ export function YoutubeSearchBar({ onSearch, ...props }: YoutubeSearchBarProps) 
   }
 
   function handleClick() {
-    const input = document.querySelector<HTMLInputElement>(".yt-search__input");
-    if (input) onSearch?.(input.value);
+    if (inputRef.current) onSearch?.(inputRef.current.value);
   }
 
   return (
-    <div className="yt-search">
+    <div className={`yt-search${className ? ` ${className}` : ""}`} style={style}>
       <input
+        ref={inputRef}
         type="search"
         className="yt-search__input"
         onKeyDown={handleKeyDown}

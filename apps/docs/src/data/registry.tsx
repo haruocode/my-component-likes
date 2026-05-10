@@ -22,6 +22,9 @@ import {
   HatenaBlogTopicFilter,
   HatenaBlogArticleCard,
   HatenaBlogOdaiCard,
+  LineMusicPricingTable,
+  LineHelpFeedback,
+  LineCallout,
 } from "@my-component-likes/react-css";
 import buttonTsxRaw from "../../../../packages/react-css/src/Button/Button.tsx?raw";
 import buttonCssRaw from "../../../../packages/react-css/src/Button/Button.css?raw";
@@ -61,6 +64,12 @@ import hatenaBlogArticleCardTsxRaw from "../../../../packages/react-css/src/Hate
 import hatenaBlogArticleCardCssRaw from "../../../../packages/react-css/src/HatenaBlogArticleCard/HatenaBlogArticleCard.css?raw";
 import hatenaBlogOdaiCardTsxRaw from "../../../../packages/react-css/src/HatenaBlogOdaiCard/HatenaBlogOdaiCard.tsx?raw";
 import hatenaBlogOdaiCardCssRaw from "../../../../packages/react-css/src/HatenaBlogOdaiCard/HatenaBlogOdaiCard.css?raw";
+import lineMusicPricingTableTsxRaw from "../../../../packages/react-css/src/LineMusicPricingTable/LineMusicPricingTable.tsx?raw";
+import lineMusicPricingTableCssRaw from "../../../../packages/react-css/src/LineMusicPricingTable/LineMusicPricingTable.css?raw";
+import lineHelpFeedbackTsxRaw from "../../../../packages/react-css/src/LineHelpFeedback/LineHelpFeedback.tsx?raw";
+import lineHelpFeedbackCssRaw from "../../../../packages/react-css/src/LineHelpFeedback/LineHelpFeedback.css?raw";
+import lineCalloutTsxRaw from "../../../../packages/react-css/src/LineCallout/LineCallout.tsx?raw";
+import lineCalloutCssRaw from "../../../../packages/react-css/src/LineCallout/LineCallout.css?raw";
 import googleNewsCardTsxRaw from "../../../../packages/react-css/src/GoogleNewsCard/GoogleNewsCard.tsx?raw";
 import googleNewsCardCssRaw from "../../../../packages/react-css/src/GoogleNewsCard/GoogleNewsCard.css?raw";
 import googleContextMenuTsxRaw from "../../../../packages/react-css/src/GoogleContextMenu/GoogleContextMenu.tsx?raw";
@@ -884,6 +893,99 @@ export const SITES: SiteEntry[] = [
         files: [
           { label: "TypeScript", code: hatenaBlogOdaiCardTsxRaw },
           { label: "CSS", code: hatenaBlogOdaiCardCssRaw },
+        ],
+      },
+    ],
+  },
+  {
+    id: "line",
+    label: "LINE",
+    components: [
+      {
+        id: "line-music-pricing-table",
+        name: "LINE MUSIC Pricing Table",
+        description:
+          "月額/年間プランを並べた料金比較テーブル。緑ボーダー・打ち消し価格・「2ヶ月分お得！」バッジ付き。",
+        preview: (
+          <LineMusicPricingTable
+            groups={[
+              {
+                label: "月額プラン",
+                plans: [
+                  {
+                    name: "学生",
+                    description: "学生認証でお得！小学生からOK",
+                    price: "580円",
+                    originalPrice: "1,080円",
+                  },
+                  { name: "一般", price: "1,080円" },
+                  {
+                    name: "ファミリー",
+                    description: "家族6人まで登録可能",
+                    price: "1,680円",
+                  },
+                ],
+              },
+              {
+                label: "年間プラン",
+                badge: "2ヶ月分お得に使える！",
+                plans: [
+                  { name: "一般", price: "10,800円" },
+                  { name: "ファミリー", price: "16,800円" },
+                ],
+              },
+            ]}
+            note="*プレミアムプラン（学割・月額）は小学生以上対象。"
+            storeLinkLabel="LINE STOREではお得なプランも販売中"
+            ctaLabel="料金プランをもっとみる"
+          />
+        ),
+        files: [
+          { label: "TypeScript", code: lineMusicPricingTableTsxRaw },
+          { label: "CSS", code: lineMusicPricingTableCssRaw },
+        ],
+      },
+      {
+        id: "line-help-feedback",
+        name: "Help Feedback",
+        description:
+          "「この情報は役に立ちましたか？」緑吹き出し＋Yes/Noボタン。回答後にサンクスメッセージを表示。",
+        preview: (() => {
+          function FeedbackPreview() {
+            return <LineHelpFeedback />;
+          }
+          return <FeedbackPreview />;
+        })(),
+        files: [
+          { label: "TypeScript", code: lineHelpFeedbackTsxRaw },
+          { label: "CSS", code: lineHelpFeedbackCssRaw },
+        ],
+      },
+      {
+        id: "line-callout",
+        name: "Callout",
+        description:
+          "参考（緑）/ 重要（赤）の2バリアント。チェックマーク付きのリスト形式コンテンツ。",
+        preview: (
+          <div style={{ display: "flex", flexDirection: "column", gap: "12px", maxWidth: "520px" }}>
+            <LineCallout
+              variant="info"
+              items={[
+                "パスワードは、同じ文字や数字を連続して利用せず、半角の英大文字、英小文字、数字、記号のうち、3種類以上を含む8〜20文字で登録してください。",
+                "詳細は「安全なパスワードとは？」を確認して設定してください。",
+              ]}
+            />
+            <LineCallout
+              variant="warning"
+              items={[
+                "引き継ぎ途中にパスワードを再設定した場合、プレミアムバックアップでトーク履歴を復元できません。",
+              ]}
+            />
+          </div>
+        ),
+        files: [
+          { label: "TypeScript", code: lineCalloutTsxRaw },
+          { label: "CSS", code: lineCalloutCssRaw },
         ],
       },
     ],

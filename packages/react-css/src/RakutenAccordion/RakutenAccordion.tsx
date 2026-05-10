@@ -27,20 +27,17 @@ export function RakutenAccordion({ items, defaultOpenId }: RakutenAccordionProps
               aria-expanded={isOpen}
             >
               <span className="rakuten-accordion__icon" aria-hidden="true">
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                  {isOpen
-                    ? <polyline points="2,8 6,4 10,8" />
-                    : <polyline points="2,4 6,8 10,4" />
-                  }
+                <svg className={`rakuten-accordion__chevron${isOpen ? " rakuten-accordion__chevron--open" : ""}`} width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="2,4 6,8 10,4" />
                 </svg>
               </span>
               <span className="rakuten-accordion__question">{item.question}</span>
             </button>
-            {isOpen && (
-              <div className="rakuten-accordion__content" role="region">
+            <div className={`rakuten-accordion__body${isOpen ? " rakuten-accordion__body--open" : ""}`} role="region">
+              <div className="rakuten-accordion__content">
                 {item.answer}
               </div>
-            )}
+            </div>
           </div>
         );
       })}

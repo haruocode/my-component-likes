@@ -1,0 +1,149 @@
+.lm-pricing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 24px;
+  background: #fff;
+}
+
+.lm-pricing__groups {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+}
+
+.lm-pricing__group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lm-pricing__badge {
+  position: relative;
+  background: #f5a623;
+  color: #fff;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  padding: 6px 16px;
+  border-radius: 4px;
+  margin-bottom: 6px;
+  white-space: nowrap;
+}
+
+.lm-pricing__badge::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 8px solid transparent;
+  border-top-color: #f5a623;
+  border-bottom: none;
+}
+
+.lm-pricing__panel {
+  width: 100%;
+  border: 2px solid #06c755;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.lm-pricing__header {
+  background: #06c755;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 10px 8px;
+}
+
+.lm-pricing__rows {
+  display: flex;
+  flex-direction: column;
+}
+
+.lm-pricing__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 14px 16px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.lm-pricing__row:last-child {
+  border-bottom: none;
+}
+
+.lm-pricing__plan-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.lm-pricing__plan-name {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: #111;
+}
+
+.lm-pricing__plan-desc {
+  font-size: 0.75rem;
+  color: #666;
+  line-height: 1.4;
+}
+
+.lm-pricing__plan-price {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  flex-shrink: 0;
+}
+
+.lm-pricing__price {
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: #06c755;
+}
+
+.lm-pricing__original {
+  font-size: 0.8125rem;
+  color: #999;
+  text-decoration: line-through;
+}
+
+.lm-pricing__note {
+  font-size: 0.75rem;
+  color: #666;
+  text-align: center;
+}
+
+.lm-pricing__store-text {
+  text-align: center;
+}
+
+.lm-pricing__store-link {
+  font-size: 0.875rem;
+  color: #06c755;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.lm-pricing__cta {
+  background: #111;
+  color: #fff;
+  border: none;
+  border-radius: 40px;
+  padding: 14px 36px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.lm-pricing__cta:hover {
+  background: #333;
+}
